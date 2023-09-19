@@ -1,0 +1,18 @@
+.sign__input{
+  border: none;
+  background-color: #000000;
+  border-bottom: 2px solid #CCCCCC;
+  width: 358px;
+  padding: 0;
+  padding-bottom: 13px;
+  font-family: 'Inter','Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #CCCCCC;
+  margin-bottom: 30px;
+}
+.sign__input:nth-child(2n){
+  margin-bottom: 0px;
+}

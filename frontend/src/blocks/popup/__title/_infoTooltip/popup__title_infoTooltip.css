@@ -1,0 +1,14 @@
+.popup__title_infoTooltip{
+  font-family: 'Inter','Arial', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  width: 358px;
+  height: 58px;
+  text-align: center;
+  margin: 0px;
+  margin-top: 32px;
+  margin-bottom: 60px;
+}
