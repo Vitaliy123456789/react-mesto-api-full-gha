@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 62.84.120.107
+IP 62.84.120.107
 
 Frontend https://pr15.nomoredomainsrocks.ru
 
