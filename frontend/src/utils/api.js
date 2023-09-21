@@ -2,7 +2,7 @@
  class Api {
   constructor(options) {
     this._options = options
-    this._request = 'http://localhost:3000'
+    this._request = 'https://api.nomoredomainsrocks.ru'
     this._authorization = `Bearer ${localStorage.getItem('jwt')}`
   }
 _checkRes(res){
