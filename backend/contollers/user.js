@@ -1,4 +1,3 @@
-const { NODE_ENV, JWT_SECRET } = process.env;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const userModel = require('../models/user');
@@ -6,6 +5,8 @@ const NotFound = require('../errors/notFound');
 const BadRequest = require('../errors/badRequest');
 const Conflict = require('../errors/conflict');
 const Unauthorized = require('../errors/Unauthorize');
+
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 const ok = 200;
 const created = 201;
