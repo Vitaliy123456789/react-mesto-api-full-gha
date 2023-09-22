@@ -33,28 +33,7 @@ function App() {
   const [infoTooltipImg,  setInfoTooltipImg] = React.useState("");
   const [infoTooltipTitle, setInfoTooltipTitle] = React.useState("");
   const [InfoTooltipPopupOpen, setInfoTooltipPopupOpen] = React.useState(false);
-//   React.useEffect(() => {
-//     api
-//       .getUserInfo()
-//       .then((res) => {
-//         console.log(res)
-//         setCurrentUser(res);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-// }, [setLoggedIn]);
-//   React.useEffect(() => {
-//     api
-//       .getInitialCards()
-//       .then((res) => {
-//         console.log(res)
-//         setCards(res);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//   }, [setLoggedIn]);
+  
   React.useEffect(() => {
     if (loggedIn) {
       Promise.all([api.getUserInfo(), api.getInitialCards()])
