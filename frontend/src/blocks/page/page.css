@@ -3,6 +3,7 @@
   background-color: #000000;
   margin: 0 auto;
   padding: 0 200px;
+  min-height: 100vh;
 }
 @media (max-width: 1279px){
   .page{

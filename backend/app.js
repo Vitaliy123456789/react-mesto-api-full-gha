@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -11,7 +12,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 }).then(() => {
   console.log('connected to db');
 });
-
 const app = express();
 const port = 3000;
 

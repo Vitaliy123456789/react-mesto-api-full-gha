@@ -33,26 +33,40 @@ function App() {
   const [infoTooltipImg,  setInfoTooltipImg] = React.useState("");
   const [infoTooltipTitle, setInfoTooltipTitle] = React.useState("");
   const [InfoTooltipPopupOpen, setInfoTooltipPopupOpen] = React.useState(false);
+//   React.useEffect(() => {
+//     api
+//       .getUserInfo()
+//       .then((res) => {
+//         console.log(res)
+//         setCurrentUser(res);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       });
+// }, [setLoggedIn]);
+//   React.useEffect(() => {
+//     api
+//       .getInitialCards()
+//       .then((res) => {
+//         console.log(res)
+//         setCards(res);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       });
+//   }, [setLoggedIn]);
   React.useEffect(() => {
-    api
-      .getUserInfo()
-      .then((res) => {
-        setCurrentUser(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-  React.useEffect(() => {
-    api
-      .getInitialCards()
-      .then((res) => {
-        setCards(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    if (loggedIn) {
+      Promise.all([api.getUserInfo(), api.getInitialCards()])
+        .then(([data, cards]) => {
+          setCurrentUser(data);
+          setCards(cards);
+        })
+        .catch((err) => {
+          console.error(err);
+        })
+    }
+  }, [loggedIn]);
   function handleCardLike(card) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
     api
